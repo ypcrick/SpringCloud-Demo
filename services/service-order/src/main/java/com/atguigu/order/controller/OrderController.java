@@ -1,6 +1,7 @@
 package com.atguigu.order.controller;
 
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.atguigu.order.bean.Order;
 import com.atguigu.order.properties.OrderProperties;
 import com.atguigu.order.service.OrderService;
@@ -47,7 +48,7 @@ public class OrderController {
         return order;
     }
 
-   /* @GetMapping("/seckill")
+    @GetMapping("/seckill")
     @SentinelResource(value = "seckill-order",fallback = "seckillFallback")
     public Order seckill(@RequestParam(value = "userId",required = false) Long userId,
                              @RequestParam(value = "productId",defaultValue = "1000") Long productId){
@@ -74,6 +75,6 @@ public class OrderController {
     public String readDb(){
         log.info("readDb...");
         return "readDb success....";
-    }*/
+    }
 
 }

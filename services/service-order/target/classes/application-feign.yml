@@ -11,15 +11,19 @@ spring:
             logger-level: full
             connect-timeout: 3000
             read-timeout: 5000
-#    sentinel:
-#      transport:
-#        dashboard: localhost:8080
-#      eager: true
-#      web-context-unify: false
+    sentinel:
+      transport:
+        dashboard: localhost:8858
+        clientIp: 202.141.181.163
+        port: 8720
+      eager: true
+      web-context-unify: false
 ##            request-interceptors:
 ##              - com.atguigu.order.interceptor.XTokenRequestInterceptor
 ##            retryer: feign.retryer.Default
 #
+
+
 feign:
   sentinel:
     enabled: true
