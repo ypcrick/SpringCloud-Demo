@@ -6,7 +6,10 @@ import com.atguigu.product.bean.Product;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+//@RequestMapping("/api")
+//@FeignClient(value = "service-product",path = "/api/product",fallback = ProductFeignClientFallback.class) // feign客户端
 @FeignClient(value = "service-product",fallback = ProductFeignClientFallback.class) // feign客户端
 public interface ProductFeignClient {
 

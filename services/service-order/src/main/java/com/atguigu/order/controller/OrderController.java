@@ -13,7 +13,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 
-//@CrossOrigin
+//@CrossOrigin//跨域操作（单体项目）
 //@RequestMapping("/api/order")
 @Slf4j
 //@RefreshScope//自动刷新
